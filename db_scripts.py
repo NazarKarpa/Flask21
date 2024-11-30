@@ -23,3 +23,11 @@ class DataBaseManager:
         data = self.cursor.fetchall()
         self.close()
         return data
+
+
+    def get_article(self, article_id):
+        self.open()
+        self.cursor.execute('''SELECT * FROM articles WHERE id=?''', [article_id])
+        data = self.cursor.fetchone()
+        self.close()
+        return data
