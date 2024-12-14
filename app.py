@@ -26,6 +26,10 @@ def category_page(category_id):
     return render_template('index.html', articles=article)
 
 
+@app.route('/articles/new', methods=['GET', 'POST'])
+def new_article():
+    return render_template('new_article.html')
+
 
 
 if __name__ == "__main__":
