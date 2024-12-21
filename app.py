@@ -13,7 +13,7 @@ IMG_PATH = os.path.dirname(__file__) + os.sep + 'static' + os.sep + 'img'
 
 
 @app.context_processor
-def get_categories():
+def get_categories():#r
     categories = db.get_all_categories()
     return dict(categories = categories)
 
