@@ -8,7 +8,9 @@
       <h1 class="my-1">{{article[1]}}</h1>
 
       <img src="{{ url_for('static', filename='img/'+article[3]) }}" class="card-fluid my-1" alt="...">
-      <p>{{article[2]}}</p>
+      {% for p in article[2].split('\n')%}
+      <p>{{p}}</p>
+       {% endfor %}
       <small>Опубліковано: {{article[4]}}</small>
     </main>
 {% endblock content %}

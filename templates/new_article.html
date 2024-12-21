@@ -19,7 +19,7 @@
           <label for="formFile" class="form-label">Прикіпити фотку</label>
           <input required name='image' class="form-control" type="file" id="formFile">
         </div>
-            <select class="form-select" aria-label="Default select example">
+            <select required name='category' class="form-select" aria-label="Default select example">
               <option selected>Open this select menu</option>
               {% for category in categories%}
                 <option value="{{category[0]}}">{{category[1]}}</option>
